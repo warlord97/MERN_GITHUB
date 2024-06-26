@@ -16,7 +16,9 @@ import job from "./cron/cron.js";
 dotenv.config();
 
 const app = express();
+connectMongoDB();
 job.start();
+
 const PORT = process.env.PORT || 5000;
 const __dirname = path.resolve();
 
@@ -41,5 +43,4 @@ app.get("*", (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`server started on http://localhost:${PORT}`);
-  connectMongoDB();
 });
