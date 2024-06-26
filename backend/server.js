@@ -11,10 +11,12 @@ import authRoutes from "./routes/authRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
 import exploreRoutes from "./routes/exploreRoutes.js";
 import connectMongoDB from "./db/connectMongoDB.js";
+import job from "./cron/cron.js";
 
 dotenv.config();
 
 const app = express();
+job.start();
 const PORT = process.env.PORT || 5000;
 const __dirname = path.resolve();
 
