@@ -12,7 +12,7 @@ function Logout() {
         credentials: "include",
       });
       const data = await response.json();
-      console.log(data);
+
       setAuthUser(null);
     } catch (error) {
       toast.error(error.message);
