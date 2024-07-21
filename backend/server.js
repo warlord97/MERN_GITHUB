@@ -17,7 +17,7 @@ dotenv.config();
 
 const app = express();
 connectMongoDB();
-job.start();
+// job.start();
 
 const PORT = process.env.PORT || 5000;
 const __dirname = path.resolve();
